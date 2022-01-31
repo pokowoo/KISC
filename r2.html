@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h3>정수 5개 입력받아 출력하기</h3>
+	<hr>
+	<script type="text/javascript">
+	
+	var plots = [prompt("첫번째 정수 입력"),prompt("두번쨰 정수 입력"),prompt("세번쨰 정수 입력"),prompt("네번째 정수입력"),prompt("5번쨰 정수입력")]
+	var re_plots=new Array();
+	for (var i=0; i<plots.length; i++) {
+		re_plots[i]=plots[plots.length-1-i]
+	}
+	var ma=plots[0]
+	ma=parseInt(ma) 
+	var mi=plots[0]
+	mi=parseInt(mi)
+	document.write("정수 5개 입력받은 순으로 출력<br>"+plots+"<hr>")
+	document.write("정수 5개 입력받아 역순으로 출력<br>"+re_plots+"<hr>")
+	for (var i=0;i<25;i++){
+		for (j=0;j<5;j++){
+			if (ma<parseInt(plots[j])) {
+				ma=parseInt(plots[j])
+			}
+		}
+	}
+	for (var i=0;i<25;i++){
+		for (j=0;j<5;j++){
+			if (mi>parseInt(plots[j])) {
+				mi=parseInt(plots[j])
+			}
+		}
+	}
+	document.write("정수 5개 입력받아 가장 높은 수 출력<br>"+ma+"<hr>")
+	document.write("정수 5개 입력받아 가장 낮은 수 출력<br>"+mi+"<hr>")
+	
+</script>
+</body>
+</html>
